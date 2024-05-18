@@ -3,7 +3,7 @@ const fs = require("fs");
 
 let loggingMiddleware = (req, res, next) => {
   fs.appendFileSync(
-    "requestlog.log",
+    "request.log",
     `Request received in ${req.url} with ${req.method} method from ${
       req.ip
     } at ${new Date()} \n`
